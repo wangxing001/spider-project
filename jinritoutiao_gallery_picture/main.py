@@ -99,7 +99,7 @@ def main():
         html = get_page_index((i+1)*10,'街拍')
 
         for url in parse_page_index(html):
-            if url and url[8:11]!=api:
+            if url and url[8:11]!='api':
                 print('\n')
                 print(url)
                 detail_html = get_page_detail(url)
