@@ -88,7 +88,7 @@ def download_image(down_image_url):
         return None
 
 def save_image(content):
-    file_path = '{0}/{1}.{2}'.format('image',md5(content).hexdigest(),'jpg')
+    file_path = '{0}/{1}.{2}'.format('image',md5(content).hexdigest(),'jpg') #md5防止图片名称重复
     if not os.path.exists(file_path):
         with open(file_path,'wb') as f:
             f.write(content) 
